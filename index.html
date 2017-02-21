@@ -12,15 +12,20 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
         <!--Animate CSS Library -->
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <!--Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 	</head>
 	<body>
         <section>
             <form id="theForm" class="base siform" autocomplete="off">
                 <ol class="question">
-					<li class="current">
+					<li>
 				        <span><label for="q"> Get Geo Location of ?</label></span>
                         <span class="error hide"></span>
+                        <div class="input">
                         <input id="q" name="q" type="text"/>
+                        <span class="loc"> <i class="fa fa-map-marker left"></i></span>
+                       </div>
                     </li>
                 </ol>
                 <p><input type="submit" value="Submit" class="btn"> </p>
