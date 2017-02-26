@@ -8,17 +8,18 @@
 		<meta name="description" content="Minimal Form Interface: Simplistic, single input view form" />
 		<meta name="keywords" content="form, minimal, interface, single input, big form, responsive form, transition" />
 		<meta name="author" content="Jai Kathuria">
+        <!--Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
         <!--Animate CSS Library -->
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
-
 	</head>
 	<body>
         <section>
             <form id="theForm" class="siform" autocomplete="off">
-                <ol class="question animated shake">
+                <ol class="question">
 					<li class="current">
 				        <span><label for="q">Single question you want to ask ?</label></span>
+                        <span class="error hide"></span>
                         <input id="q" name="q" type="text"/>
                     </li>
                 </ol>
@@ -27,5 +28,8 @@
         </section>
         <!-- JQuery-->
         <script src="js/jquery.js"></script>
+        <!-- Validate JS -->
+        <script src="js/validate.js"></script>
+        
 	</body>
 </html>
