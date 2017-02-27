@@ -31,7 +31,7 @@ var showOutput = function(place){
             }
             else {
                     var err = $(".error");
-                    err.html("No Place Found With Given Name")
+                    err.html("No Place Found!")
                     err.removeClass("hide");
                     var q = $(".question");
                     $('body').css('background-color','#EF5350');
