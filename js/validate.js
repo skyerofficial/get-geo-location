@@ -11,10 +11,14 @@ $(document).ready( function(){
         var i = $("#q").val();
         if(isEmpty(i)){
             var err = $(".error");
-            err.html("Input Can't be Empty!")
+            err.html("Field Can't be Empty!")
             err.removeClass("hide");
             var q = $(".question");
+            $('body').css('background-color','#EF5350');
             q.addClass("animated shake");
+            window.setTimeout(function(){
+                $('body').css('background-color','#3498db');
+            },1200);
             return false;
         }
     });
