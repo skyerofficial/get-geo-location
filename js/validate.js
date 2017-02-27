@@ -3,10 +3,10 @@ var isEmpty = function (v) {
         return true;
     }
     return false;
-}
+};
 
 $(document).ready( function(){
-    $( '#theForm' ).submit( function( e ){
+    $('#theForm').submit(function(e){
         e.preventDefault();
         var i = $("#q").val();
         if(isEmpty(i)){
@@ -18,8 +18,10 @@ $(document).ready( function(){
             q.addClass("animated shake");
             window.setTimeout(function(){
                 $('body').css('background-color','#3498db');
+                q.removeClass("animated shake");
             },1200);
             return false;
         }
+        showOutput(i);
     });
 });
