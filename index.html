@@ -15,7 +15,7 @@
 	</head>
 	<body>
         <section>
-            <form id="theForm" class="base siform" autocomplete="off" style="display:none">
+            <form id="theForm" class="base siform" autocomplete="off">
                 <ol class="question">
 					<li class="current">
 				        <span><label for="q"> Get Geo Location of ?</label></span>
@@ -25,16 +25,18 @@
                 </ol>
                 <p><input type="submit" value="Submit" class="btn"> </p>
             </form>
-            <div class="base thin">
-                Geo Location of &nbsp; <span class="place jumbo"> {{ Place }}</span><br>
+            <div id="output" class="base thin hidden">
+                Geo Location of &nbsp; <br><span class="place jumbo"> {{ Place }}</span><br>
                 <div class="vals">
-                    L a t i t u d e : <span class="val thin">{{ Value 1 }}</span><br>
-                    L o n g i t u d e : <span class="val thin">{{  Value 2}}</span>
+                    L a t i t u d e : <span class="val thin lat"> {{ Value 1 }}</span><br>
+                    L o n g i t u d e : <span class="val thin lng"> {{ Value 2 }}</span>
                 </div>
             </div>
         </section>
         <!-- JQuery-->
         <script src="js/jquery.js"></script>
+        <!-- App JS -->
+        <script src="js/app.js"></script>
         <!-- Validate JS -->
         <script src="js/validate.js"></script>
         
