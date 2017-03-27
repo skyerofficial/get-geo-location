@@ -20,7 +20,7 @@ var showOutput = function(place){
                 if(place.length > 10){
                     place  = "<br>" + place;
                 }
-                placeHolder.html();
+                placeHolder.html(place);
                 lat = response["results"][0]["geometry"]["location"]["lat"];
                 lng = response["results"][0]["geometry"]["location"]["lng"];
                 latHolder.html(lat);
