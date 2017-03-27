@@ -4,11 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Single Input WebPage</title>
+		<title>Get GeoLocation</title>
 		<meta name="description" content="Minimal Form Interface: Simplistic, single input view form" />
 		<meta name="keywords" content="form, minimal, interface, single input, big form, responsive form, transition" />
 		<meta name="author" content="Jai Kathuria">
-		<link rel="stylesheet" type="text/css" href="style.css" />
+        <!--Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+        <!--Animate CSS Library -->
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
 	</head>
 	<body>
         <section>
@@ -16,11 +19,17 @@
                 <ol class="question">
 					<li class="current">
 				        <span><label for="q">Single question you want to ask ?</label></span>
+                        <span class="error hide"></span>
                         <input id="q" name="q" type="text"/>
                     </li>
                 </ol>
                 <p><input type="submit" value="Submit" class="btn"> </p>
             </form>
         </section>
+        <!-- JQuery-->
+        <script src="js/jquery.js"></script>
+        <!-- Validate JS -->
+        <script src="js/validate.js"></script>
+        
 	</body>
 </html>
