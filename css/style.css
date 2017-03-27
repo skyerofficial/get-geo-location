@@ -187,3 +187,7 @@ input[type=text]::-ms-clear {
 .val {
     font-size: 1.4em;
 }
+.hidden {
+    display: none;
+}
+
