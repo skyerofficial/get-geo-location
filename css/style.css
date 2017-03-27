@@ -22,6 +22,12 @@ section {
 	text-align: center;
 }
 
+.error {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
 .btn {
   position: relative;
   vertical-align: top;
@@ -149,4 +155,10 @@ input[type=text]::-ms-clear {
 		font-size: 1.2em;
     height: 40px;
 	}
+}
+
+
+
+.hide {
+    visibility: hidden;
 }
