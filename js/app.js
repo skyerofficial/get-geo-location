@@ -3,7 +3,6 @@ var mapKey = "AIzaSyCTPANDaNQMRYRGR8z9UPy8SQdokC30rbk";
 var showOutput = function(place){
     place = place.replace(" ","+");
     var url = baseUrl + "?address=" + place + "&key=" + mapKey;
-    console.log(url);
     var form  = $("#theForm");
     var output = $("#output");
     var placeHolder = $(".place");
@@ -16,15 +15,32 @@ var showOutput = function(place){
         method: "GET",
         dataType: "JSON",
         success: function( response ){
-            form.hide();
-            output.show();
             if(response.status != "ZERO_RESULTS"){
-                console.log(response.results[0].formatted_address);
+                place = place.replace("+"," ");
+                if(place.length > 10){
+                    place  = "<br>" + place;
+                }
+                placeHolder.html();
                 lat = response["results"][0]["geometry"]["location"]["lat"];
-                response["results"][0]["geometry"]["location"]["lng"];
+                lng = response["results"][0]["geometry"]["location"]["lng"];
+                latHolder.html(lat);
+                lngHolder.html(lng);
+                $('body').css('background-color','#2ecc71');
+                form.hide();
+                output.fadeIn();
             }
             else {
-                    console.log("error: fetching location coordinates");
+                    var err = $(".error");
+                    err.html("No Place Found!")
+                    err.removeClass("hide");
+                    var q = $(".question");
+                    $('body').css('background-color','#EF5350');
+                    q.addClass("animated shake");
+                    window.setTimeout(function(){
+                        $('body').css('background-color','#3498db');
+                        q.removeClass("animated shake");
+                    },1200);
+                    return false;
             }
         }
     });
