@@ -82,7 +82,6 @@ section {
 
 .siform ol:before {
 	content: '';
-	background-color: rgba(0,0,0,0.1);
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -109,27 +108,32 @@ section {
 .question span label {
     font-size: 0.8em;
 }
-
+.input{
+    margin-top: 1em;
+    background-color: rgba(0,0,0,0.1);
+    width: inherit;
+    
+}
 /* Input field */
-.question input {
-	display: block;
-	margin: 0.3em 0 0 0;
-	padding: 1.3em 1em 0.5em 1em;
-	width: calc(100% - 2em);
+.input input {
+	display: inline-block;
+	padding: 0.5em 1em 0.5em 1em;
 	border: none;
 	background: transparent;
 	color: rgb(255, 255, 255);
 	font-size: 1em;
 	line-height: 1;
-	opacity: 0;
+	opacity: 1;
+    width: calc(90% - 2em);
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
-
-.question input {
-	opacity: 1;
+.loc {
+    display: inline-block;
+    padding: 0.5em 0.3em 0 0em;
 }
+
 
 .question input:focus,
 .siform button:focus {
@@ -189,5 +193,10 @@ input[type=text]::-ms-clear {
 }
 .hidden {
     display: none;
+}
+
+
+.left {
+    float: right;
 }
 

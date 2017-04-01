@@ -5,7 +5,8 @@ var isEmpty = function (v) {
     return false;
 };
 
-$(document).ready( function(){
+
+$(document).ready(function(){
     $('#theForm').submit(function(e){
         e.preventDefault();
         var i = $("#q").val();
